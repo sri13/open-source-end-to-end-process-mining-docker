@@ -28,6 +28,7 @@ This fork keeps the original code intact while adding a production‑ready Docke
 git clone https://github.com/sri13/open-source-end-to-end-process-mining-docker.git
 cd open-source-end-to-end-process-mining-docker
 
+
 ### 2. Clone the fork
 ```bash
 git clone https://github.com/<your-username>/open-source-end-to-end-process-mining.git
