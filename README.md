@@ -1,4 +1,4 @@
-# 🧠 Open Source End-to-End Process Mining (Dockerized Fork)
+# 📘  Open Source End-to-End Process Mining (Dockerized Fork)
 
 This repository is a **Docker-enabled fork** of Nick Blackburn’s excellent open-source process mining project.  
 The original project provides a complete pipeline:
@@ -28,6 +28,61 @@ This fork keeps the original code intact while adding a production‑ready Docke
 git clone https://github.com/sri13/open-source-end-to-end-process-mining-docker.git
 cd open-source-end-to-end-process-mining-docker
 
-****WIP****
 ### 2. Clone the fork
 ```bash
+git clone https://github.com/<your-username>/open-source-end-to-end-process-mining.git
+cd open-source-end-to-end-process-mining
+
+### 3. Build the Docker image
+```bash
+docker build -t open_source_e2e_process_miner .
+
+### 4. Create an output folder
+
+mkdir output
+
+### 5. Run the pipeline
+
+docker run --rm \
+  -v "$PWD/output":/app/output \
+  open_source_e2e_process_miner
+
+All generated files will appear in:
+
+./output/
+
+📦 Output Files
+
+The pipeline produces:
+
+event_log.csv — flattened event log
+
+process_data.db — SQLite database
+
+process_map.png — PM4PY DFG visualization
+
+process_map_matplotlib.png — fallback matplotlib diagram
+
+
+🏗️ Project Structure
+
+open-source-end-to-end-process-mining/
+│
+├── process_mining.py
+├── requirements.txt
+├── Dockerfile
+├── sample_data.xlsx
+├── output/  (created locally)
+└── README.md
+
+📝 Credits
+
+This project is based on the original work by Dr. Nick Blackburn:https://github.com/nickblackbourn/open-source-end-to-end-process-mining
+
+This fork simply adds Docker support and compatibility fixes.
+
+
+📄 License
+
+This fork inherits the license from the original repository.
+
