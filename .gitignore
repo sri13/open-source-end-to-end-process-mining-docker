@@ -1,0 +1,39 @@
+# Generated process mining outputs  
+process_map*.png
+event_log.csv
+*.svg
+*.pdf
+process_data.db
+
+# Installers and executables
+*.exe
+*.msi
+*.dmg
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# pytest cache
+.pytest_cache/
